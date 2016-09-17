@@ -3,7 +3,7 @@ package rtorrent
 import (
 	"fmt"
 
-	"github.com/tblyler/go-rtorrent/xmlrpc"
+	"github.com/jaybeecave/go-rtorrent/xmlrpc"
 )
 
 // RTorrent is used to communicate with a remote rTorrent instance
@@ -13,13 +13,13 @@ type RTorrent struct {
 
 // Torrent represents a torrent in rTorrent
 type Torrent struct {
-	Hash      string
-	Name      string
-	Path      string
-	Size      int
-	Label     string
-	Completed bool
-	Ratio     float64
+	Hash      string  `json:"hash"`
+	Name      string  `json:"name"`
+	Path      string  `json:"path"`
+	Size      int     `json:"size"`
+	Label     string  `json:"label"`
+	Completed bool    `json:"completed"`
+	Ratio     float64 `json:"ratio"`
 }
 
 // File represents a file in rTorrent
